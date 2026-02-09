@@ -4,7 +4,7 @@
   "description": "Professional web development agency portfolio with contact management",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./bin/www",
     "dev": "nodemon server.js"
   },
   "keywords": [
