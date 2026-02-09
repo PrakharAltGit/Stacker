@@ -430,55 +430,30 @@ body {
 }
 
 /* Why Choose Us Section */
+/* Why Choose Us Section */
 .why-choose-section {
     padding: 6rem 2rem;
     background-color: var(--dark-navy);
     color: var(--white);
 }
 
-.why-choose-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+.why-choose-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .why-intro {
     color: #cbd5e1;
     font-size: 1.0625rem;
     line-height: 1.7;
-    margin-bottom: 2.5rem;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.stat-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.stat-card h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat-card p {
-    color: #cbd5e1;
-    font-size: 0.9375rem;
-}
-
-.benefits-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .benefit-item {
@@ -511,6 +486,12 @@ body {
     color: #cbd5e1;
     font-size: 0.9375rem;
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Portfolio Section */
