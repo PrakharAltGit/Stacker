@@ -16,9 +16,12 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error("Mongo error:", err));
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 5000,
+})
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.error("Mongo error:", err));
+
 
 
 // Import the Contact model
