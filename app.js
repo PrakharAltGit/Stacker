@@ -21,13 +21,6 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error("Mongo error:", err));
 
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB Connected Successfully'))
-.catch(err => console.log('MongoDB Connection Error:', err));
-
 // Import the Contact model
 const Contact = require('./models/contact');  // Import schema
 
@@ -71,8 +64,4 @@ app.get('/admin/contacts', async (req, res) => {
   }
 });
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+module.exports = app;
